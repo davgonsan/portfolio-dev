@@ -1,0 +1,22 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+{
+    date: "01/12/2022 - Actualidad",
+    title: "Desarrollador de Software - Hubsis Latinoamerica",
+    description:
+      "En mi rol como Desarrollador de Software automatice los procesos de migración de cuentas contables en el sistema ERP Profit 2k12, desarrolle aplicaciones y sistemas de software, con tecnologías clave como Visual Studio, C#, Crystal Reports y SQL Server",
+    link: "https://www.hubsislatam.com/",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

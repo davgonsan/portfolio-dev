@@ -1,0 +1,102 @@
+---
+import NextJS from "./icons/NextJS.astro"
+import NoEsAstro from "./icons/NoEsAstro.astro"
+import PHP from "./icons/PHP.astro"
+import JS from "./icons/JS.astro"
+import HTML from "./icons/HTML.astro"
+import CSS from "./icons/CSS.astro"
+import TypeScript from "./icons/TypeScript.astro"
+import Svelte from "./icons/Svelte.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black",
+    icon: NextJS,
+  },
+  NoEsAstro: {
+    name: "Astro",
+    class: "bg-[#003159]",
+    icon: NoEsAstro,
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#7964b4]",
+    icon: PHP,
+  },
+  JS: {
+    name: "JS",
+    class: "bg-[#f0db4f] text-black",
+    icon: JS,
+  },
+  TypeScript: {
+    name: "TypeScript",
+    class: "bg-[#3178c6]",
+    icon: TypeScript,
+  },
+  HTML: {
+    name: "HTML",
+    class: "bg-[#e34f26]",
+    icon: HTML,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#0c73b8]",
+    icon: CSS,
+  },
+  Svelte: {
+    name: "Svelte",
+    class: "bg-[#ff3e00]",
+    icon: Svelte,
+  },
+}
+const PROJECTS = [
+{
+    title: "VentureX - Sistema Administrativo para Empresas y Medianas Empresas",
+    description:
+      "Creado con tecnologías como PHP, JS, HTML y CSS. Es un sistema administrativo para gestionar información sobre productos, ventas, usuarios y ganancias comerciales.",
+    link: "https://github.com/davgonsan/SDV",
+    github: "https://github.com/davgonsan/SDV",
+    image: "https://camo.githubusercontent.com/f1d113cdf7ed61a15de9141670845eeb54bb7f96c6326c1780c39ae606ac1abf/68747470733a2f2f63646e2e676c697463682e676c6f62616c2f63626264643766382d383630632d346661312d386264342d3732376463666434633062632f35663266393461352d633035382d346434622d396561332d6161376432386133343563642e696d6167652e706e673f763d31363837373438303430313933",
+    tags: [TAGS.PHP, TAGS.JS, TAGS.HTML, TAGS.CSS],
+  },
+  {
+    title: "SpotClone - Música Alojada En Servidor Local",
+    description:
+      "Clon del popular servicio de música Spotify construido utilizando Astro, un moderno generador de sitios front-end que ofrece rendimiento increíblemente rápido. Interfaz de usuario similar a Spotify. Reproducción de música. Funcionalidades de búsqueda, playlists y perfiles de usuario. Diseño adaptable a diferentes dispositivos (responsive design).",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "https://cdn.glitch.global/cbbdd7f8-860c-4fa1-8bd4-727dcfd4c0bc/SpotClone.png?v=1704639861212",
+    tags: [TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.TypeScript, TAGS.Svelte, TAGS.NoEsAstro],
+  },
+]
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        class="rounded shadow-2xl shadow-white/10 aspect-video mb-20"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
