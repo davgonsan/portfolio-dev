@@ -1,15 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import AboutMe from "../components/AboutMe.astro"
 import Badge from "../components/Badge.astro"
-import SectionContainer from "../components/SectionContainer.astro"
-import LinkedInIcon from "../components/icons/LinkedIn.astro"
-import SocialPill from "../components/SocialPill.astro"
-import GitHubIcon from "../components/icons/GitHub.astro"
-import MailIcon from "../components/icons/Mail.astro"
-import Experience from "../components/Experience.astro"
 import Briefcase from "../components/icons/Briefcase.astro"
 import CodeIcon from "../components/icons/Code.astro"
+import Experience from "../components/Experience.astro"
+import GitHubIcon from "../components/icons/GitHub.astro"
+import LinkedInIcon from "../components/icons/LinkedIn.astro"
+import MailIcon from "../components/icons/Mail.astro"
+import ProfileCheck from "../components/icons/ProfileCheck.astro"
 import Projects from "../components/Projects.astro"
+import SectionContainer from "../components/SectionContainer.astro"
+import SocialPill from "../components/SocialPill.astro"
 ---
 
 <Layout
@@ -17,11 +19,11 @@ import Projects from "../components/Projects.astro"
   description="Desarrollador de Software con las capacidades necesarias para llevar a cabo proyectos de suma importancia"
 >
   <main class="px-4">
-    <SectionContainer class="py-44 pb-32">
+    <SectionContainer class="py-44 pb-32" id="contacto">
       <img
         class="rounded-full w-18 h-24 mb-4"
         src="https://cdn.glitch.global/cbbdd7f8-860c-4fa1-8bd4-727dcfd4c0bc/me2.jpg?v=1704546447847"
-        alt="David photo"
+        alt="Foto de David Gonzalez"
       />
       <h1
         class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
@@ -30,7 +32,7 @@ import Projects from "../components/Projects.astro"
           href="https://linkedin.com/in/david-gonzalez-dev2012"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center"
+          class="flex justify-center items-center hover:scale-105 transition"
         >
           <Badge>Disponible para trabajar</Badge>
         </a>
@@ -46,18 +48,18 @@ import Projects from "../components/Projects.astro"
       </span><span class="opacity-90">Especializado en</span><span
         class="text-red-200/90"
       >
-        otorgarle vida a sus ideas más ambiciosas
+        otorgarle vida a tus ideas más ambiciosas
       </span>
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
         <SocialPill href="https://linkedin.com/in/david-gonzalez-dev2012">
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+          LinkedIn
         </SocialPill>
         <SocialPill href="https://github.com/davgonsan">
           <GitHubIcon class="size-4 md:size-6" />
-           GitHub
+          GitHub
         </SocialPill>
         <SocialPill href="mailto:davidgonzalezdev@gmail.com">
           <MailIcon class="size-4 md:size-6" />
@@ -71,7 +73,7 @@ import Projects from "../components/Projects.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <Briefcase class="size-7" />
-         Experiencia laboral
+        Experiencia laboral
       </h2>
       <Experience />
     </SectionContainer>
@@ -81,9 +83,19 @@ import Projects from "../components/Projects.astro"
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
         <CodeIcon class="size-7" />
-         Proyectos
+        Proyectos
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi">
+      <h2
+        class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
+      >
+        <ProfileCheck class="size-7" />
+        Sobre mí
+      </h2>
+      <AboutMe />
     </SectionContainer>
   </main>
 </Layout>
