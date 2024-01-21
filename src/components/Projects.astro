@@ -64,7 +64,7 @@ const PROJECTS = [
     description:
       "Creado con tecnologías como PHP, JS, HTML y CSS. Es un sistema administrativo para gestionar información sobre productos, ventas, usuarios y ganancias comerciales.",
     //link: "https://github.com/davgonsan/SDV",
-    github: "https://github.com/davgonsan/SDV",
+    //github: "https://github.com/davgonsan/SDV",
     image: "./projects/VentureX.png",
     tags: [TAGS.PHP, TAGS.JS, TAGS.HTML, TAGS.CSS],
   },
@@ -73,7 +73,7 @@ const PROJECTS = [
     description:
       "Clon del popular servicio de música Spotify construido utilizando Astro, un moderno generador de sitios front-end que ofrece rendimiento increíblemente rápido. Interfaz de usuario similar a Spotify. Reproducción de música. Funcionalidades de búsqueda, playlists y perfiles de usuario. Diseño adaptable a diferentes dispositivos (responsive design).",
     github: "https://github.com/davgonsan/SpotClone",
-    image: "https://cdn.glitch.global/cbbdd7f8-860c-4fa1-8bd4-727dcfd4c0bc/SpotClone.png?v=1704639861212",
+    image: "./projects/SpotClone.png",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.TypeScript, TAGS.Svelte, TAGS.NoEsAstro],
   },
 ]
@@ -83,7 +83,7 @@ const PROJECTS = [
   {
     PROJECTS.map(({ image, title, description, tags, /*link,*/  github }) => (
       <article>
-        <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+        <h3 class="text-2xl font-semibold text-yellow-700 dark:text-yellow-200 mb-2">
           {title}
         </h3>
         <p class="text-lg mb-4 text-pretty">{description}</p>
