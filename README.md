@@ -1,3 +1,3 @@
-# Porfolio para programadores y desarrolladores
+# Mi Portfolio
 
 ![Previsualización del Portfolio Web](img.png)
