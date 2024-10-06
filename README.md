@@ -1,3 +1,3 @@
 # Porfolio para programadores y desarrolladores
 
-![Previsualización del Portfolio Web](image.png)
+![Previsualización del Portfolio Web](img.png)
